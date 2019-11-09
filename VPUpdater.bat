@@ -25,7 +25,7 @@ IF /I %VPVersion% LSS %NewVersion% (goto Update) ELSE (goto DUpdate)
 :Update	
   echo Running installer...
   start /w vppsetup.exe
-  del "C:\Users\%userprofile%\Desktop\NCH Suite.lnk"
+  del "%userprofile%\Desktop\NCH Suite.lnk"
   IF "%1" == "-changelog" (start https://www.nchsoftware.com/videopad/versions.html)
   goto End
 
